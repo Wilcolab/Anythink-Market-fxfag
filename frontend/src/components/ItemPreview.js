@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const getImage = (item) => {
   if ("image" in item && item.image !== "") {
-    return itemImg;
+    return item.image;
   } else {
     return "/placeholder.png";
   }
