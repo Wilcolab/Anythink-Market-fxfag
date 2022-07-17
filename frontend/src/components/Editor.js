@@ -28,6 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
 class Editor extends React.Component {
   constructor() {
     super();
+    
     this.props.onUpdateField("image", "/placeholder.png");
 
     const updateFieldEvent = (key) => (ev) =>
