@@ -28,6 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
 class Editor extends React.Component {
   constructor() {
     super();
+    this.props.onUpdateField("image", "/placeholder.png");
 
     const updateFieldEvent = (key) => (ev) =>
       this.props.onUpdateField(key, ev.target.value);
@@ -47,16 +48,17 @@ class Editor extends React.Component {
       this.props.onRemoveTag(tag);
     };
 
-    const getImage = (itemImg) => {
-      return itemImg === "" ? "/placeholder.png" : itemImg;
-    }
+    // const getImage = (itemImg) => {
+    //   return itemImg === "" ? "/placeholder.png" : itemImg;
+    // }
 
     this.submitForm = (ev) => {
       ev.preventDefault();
       const item = {
         title: this.props.title,
         description: this.props.description,
-        image: getImage(this.props.image),
+        // image: getImage(this.props.image),
+        image: this.props.image,
         tagList: this.props.tagList,
       };
 
