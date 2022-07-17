@@ -48,12 +48,7 @@ class Editor extends React.Component {
     };
 
     const getImage = (itemImg) => {
-      console.log(itemImg);
-      if (itemImg === "") {
-        return "/placeholder.png"
-      } else {
-        return itemImg;
-      }
+      return itemImg === "" ? "/placeholder.png" : itemImg;
     }
 
     this.submitForm = (ev) => {
