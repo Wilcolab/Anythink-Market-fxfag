@@ -17,6 +17,15 @@ const mapDispatchToProps = (dispatch) => ({
     }),
 });
 
+const getImage = (itemImg) => {
+  console.log(itemImg);
+  if (itemImg === "") {
+    return "/placeholder.png"
+  } else {
+    return itemImg;
+  }
+}
+
 const ItemPreview = (props) => {
   const item = props.item;
 
